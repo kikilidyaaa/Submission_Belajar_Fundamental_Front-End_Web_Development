@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  display: none;
+}
+
+header > nav {
+  align-items: center;
+  background-color: #26677e;
+  border-bottom: 1px solid white;
+  display: flex;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+header > nav > h1 {
+  color: white;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+main {
+  background-color: #2d7284;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25%;
+  padding: 20px;
+}
+
+.input_section > h2 {
+  text-align: center;
+}
+
+.search_section {
+  margin: 20px 20%;
+}
+
+#searchNote {
+  position: relative;
+}
+
+#searchNote > i {
+  color: black;
+  fill: black;
+  left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#searchNote > input {
+  background-color: #f8f9fa;
+  border: 1px solid #6c757d;
+  border-radius: 7px;
+  font-size: 18px;
+  padding: 15px 12px 15px 55px;
+}
+
+#searchNote > input:focus {
+  background-color: white;
+}
+
+#searchNote > input::placeholder {
+  font-size: 16px;
+}
+
+#searchNoteTitle {
+  appearance: none;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  display: block;
+  font-size: 16px;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+
+.note_section {
+  margin: 20px 5% 0;
+  padding: 15px;
+}
+
+.noteList {
+  margin: 5px;
+  padding: 16px;
+  width: 100%;
+}
+
+.noteList > .allNoteList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.noteList > .archivedNoteList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.containerNotes {
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  background-color: #26677e;
+  padding: 16px;
+  margin: 10px 0;
+}
+
+.noteList > .allNoteList > .containerNotes {
+  padding: 8px 5px 16px 16px;
+  margin: 10px 0;
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  background-color: #26677e;
+}
+
+.noteList > .archivedNoteList > .containerNotes {
+  padding: 8px 5px 16px 16px;
+  margin: 10px 0;
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  background-color: #26677e;
+}
+
+.note_section h3 {
+  margin: 5px 0;
+}
+
+.note_section small {
+  margin: 5px 0;
+}
+
+.note_section p {
+  margin: 5px 0;
+}
+
+.note_section button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.containerNotes {
+  position: relative;
+}
+
+.noteContent {
+  padding-bottom: 50px;
+}
+
+.note_section .remove {
+  background-color: transparent;
+  bottom: 5px;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  right: 40px;
+}
+
+.note_section .remove:hover {
+  bottom: 5px;
+  color: black;
+  font-size: 24px;
+  position: absolute;
+  right: 40px;
+}
+
+.note_section .archived {
+  background-color: transparent;
+  bottom: 5px;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  right: 5px;
+}
+
+.note_section .archived:hover {
+  bottom: 5px;
+  color: black;
+  font-size: 22px;
+  position: absolute;
+  right: 5px;
+}
+
+.note_section .unarchived {
+  background-color: transparent;
+  bottom: 5px;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  right: 5px;
+}
+
+.note_section .unarchived:hover {
+  bottom: 5px;
+  color: black;
+  font-size: 22px;
+  position: absolute;
+  right: 5px;
+}
+
+footer {
+  background-color: #26677e;
+  border-top: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 1px;
+  text-align: center;
+}
+
+@media (max-width: 998px) {
+  .noteList > .allNoteList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .noteList > .allNoteList > .containerNotes {
+    width: 100%;
+  }
+
+  .noteList > .archivedNoteList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .noteList > .archivedNoteList > .containerNotes {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .noteList > .allNoteList {
+    grid-template-columns: 1fr;
+  }
+
+  .noteList > .allNoteList > .containerNotes {
+    width: 100%;
+  }
+
+  .noteList > .archivedNoteList {
+    grid-template-columns: 1fr;
+  }
+
+  .noteList > .archivedNoteList > .containerNotes {
+    width: 100%;
+  }
+}

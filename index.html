@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="icon" href="favicon.png" />
+
+    <!-- Animasi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <loading-indicator id="loadingIndicator"></loading-indicator>
+
+    <header>
+      <nav class="animate__animated animate__fadeInDown">
+        <a href="index.html"><img src="favicon.png" /></a>
+        <h1>Notes App</h1>
+      </nav>
+    </header>
+
+    <main>
+      <section class="input_section animate__animated animate__fadeInUp">
+        <h2 id="titleForm">Masukkan Catatan Baru</h2>
+        <form id="inputNote">
+          <custom-input label="Judul" placeholder="Masukkan judul" required></custom-input>
+          <custom-textarea
+            label="Catatan"
+            placeholder="Masukkan catatan"
+            required
+          ></custom-textarea>
+          <custom-button type="submit">Simpan</custom-button>
+        </form>
+      </section>
+
+      <section class="search_section animate__animated animate__fadeInUp">
+        <form id="searchNote">
+          <i class="fa fa-search"></i>
+          <input id="searchNoteTitle" type="text" placeholder="Cari judul catatan" />
+        </form>
+      </section>
+
+      <section class="note_section animate__animated animate__fadeInUp">
+        <div class="noteList">
+          <h2>Semua Catatan</h2>
+          <div id="allNoteList" class="allNoteList"></div>
+        </div>
+        <div class="noteList">
+          <h2>Arsip Catatan</h2>
+          <div id="archivedNoteList" class="archivedNoteList"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeInUp">
+      <p>Crafted with passion &#169; 2024, Kiki Lidya Koswara</p>
+    </footer>
+
+  </body>
+</html>
